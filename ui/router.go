@@ -43,8 +43,6 @@ func initRouters() {
 	beego.Router("/reset_password", &controllers.ResetPasswordController{})
 	beego.Router("/search", &controllers.SearchController{})
 
-	beego.Router("/jump", &controllers.CommonController{}, "get:Jump")
-
 	beego.Router("/login", &controllers.CommonController{}, "post:Login")
 	beego.Router("/log_out", &controllers.CommonController{}, "get:LogOut")
 	beego.Router("/reset", &controllers.CommonController{}, "post:ResetPassword")
