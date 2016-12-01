@@ -1,0 +1,319 @@
+/*
+    Copyright (c) 2016 VMware, Inc. All Rights Reserved.
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+        
+        http://www.apache.org/licenses/LICENSE-2.0
+        
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;  
+  position: fixed;
+}
+
+.has-logged-in {
+  position: relative; 
+  top: 50px;
+}
+
+.has-logged-in h4 {
+  float: left; 
+  width: 100%;
+  line-height: 2em; 
+  text-align: center;
+}
+
+.has-logged-in .last-logged-in-time {
+  text-align: center;
+}
+
+.has-logged-in .control-button {
+  height: 2em;
+  width: 100%;
+  padding-right: 10%;
+  clear: both;
+}
+
+.container-fluid-custom {
+  background-color: #EFEFEF;	
+  width: 100%;
+  height: 100%;
+  min-height: 1px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.up-section {
+  position: relative;
+  padding: 15px 15px 15px;
+  margin: 20px 0 0 -15px;
+  background-color: #FFFFFF;
+  height: 277px;
+}
+
+.up-section h4 label {
+  margin-left: 5px;
+}
+
+.right-part {
+  padding-right: 0;
+  margin-right: -15px;
+}
+
+.thumbnail {
+  margin-top: 10px;
+  display: inline-block;
+  border: none;
+  padding: 2px;
+  box-shadow: none;
+  width: 30%;
+  vertical-align: top;
+}
+
+.down-section {
+  position: relative;
+  padding: 15px 15px 15px;
+  margin: 20px -15px 0 -15px;
+  background-color: #FFFFFF;
+  height: 350px;
+}
+
+.down-section-left {
+  margin-right: 0;
+}
+
+.down-section ul {
+  padding: 0;
+  margin-left: 30px;
+  margin-right: 20px;
+}
+
+.long-line {
+  overflow: hidden;
+  width: 100%;
+}
+
+.long-line-margin-right {
+  margin-right: 30px;
+}
+
+.down-table-pane {
+  overflow-y: auto;
+  height: 260px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.page-header {
+  padding-bottom: 10px;
+  margin: 10px;
+  border-bottom: none;
+}
+
+.underlined {
+  border-bottom: 2px solid #EFEFEF;
+}
+
+.step-content {
+  text-align: center;
+}
+
+.display-inline-block {
+  display: inline-block;
+}
+
+.title-color {
+  color: #057ac9;
+}
+
+.page-content {
+  margin: 0 20px 0 20px;
+  text-align: left;
+  overflow-y: hidden;
+}
+
+.animate-if {
+  
+}
+
+.animate-if.ng-enter, .animate-if.ng-leave {
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+
+.animate-if.ng-enter,
+.animate-if.ng-leave.ng-leave-active {
+  opacity:0;
+}
+
+.animate-if.ng-leave,
+.animate-if.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+.loader{
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 25%;
+  max-width: 25%;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+}
+
+@-webkit-keyframes rotate_pacman_half_up {
+    0% {
+        -webkit-transform: rotate(270deg);
+        transform: rotate(270deg);
+    }
+    50% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+    100% {
+        -webkit-transform: rotate(270deg);
+        transform: rotate(270deg);
+    }
+}
+
+@keyframes rotate_pacman_half_up {
+    0% {
+        -webkit-transform: rotate(270deg);
+        transform: rotate(270deg);
+    }
+    50% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+    100% {
+        -webkit-transform: rotate(270deg);
+        transform: rotate(270deg);
+    }
+}
+
+@-webkit-keyframes rotate_pacman_half_down {
+    0% {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+    50% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes rotate_pacman_half_down {
+    0% {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+    50% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+}
+
+@-webkit-keyframes pacman-balls {
+    75% {
+        opacity: 0.7;
+    }
+    100% {
+        -webkit-transform: translate(-100px, -6.25px);
+        transform: translate(-100px, -6.25px);
+    }
+}
+
+@keyframes pacman-balls {
+    75% {
+        opacity: 0.7;
+    }
+    100% {
+        -webkit-transform: translate(-100px, -6.25px);
+        transform: translate(-100px, -6.25px);
+    }
+}
+
+.pacman {
+    position: relative;
+}
+
+.pacman > div:nth-child(2) {
+    -webkit-animation: pacman-balls 1s 0s infinite linear;
+    animation: pacman-balls 1s 0s infinite linear;
+}
+
+.pacman > div:nth-child(3) {
+    -webkit-animation: pacman-balls 1s 0.33s infinite linear;
+    animation: pacman-balls 1s 0.33s infinite linear;
+}
+
+.pacman > div:nth-child(4) {
+    -webkit-animation: pacman-balls 1s 0.66s infinite linear;
+    animation: pacman-balls 1s 0.66s infinite linear;
+}
+
+.pacman > div:nth-child(5) {
+    -webkit-animation: pacman-balls 1s 0.99s infinite linear;
+    animation: pacman-balls 1s 0.99s infinite linear;
+}
+
+.pacman > div:first-of-type {
+    width: 0px;
+    height: 0px;
+    border-right: 25px solid transparent;
+    border-top: 25px solid #057AC9;
+    border-left: 25px solid #057AC9;
+    border-bottom: 25px solid #057AC9;
+    border-radius: 25px;
+    -webkit-animation: rotate_pacman_half_up 0.5s 0s infinite;
+    animation: rotate_pacman_half_up 0.5s 0s infinite;
+}
+
+.pacman > div:nth-child(2) {
+    width: 0px;
+    height: 0px;
+    border-right: 25px solid transparent;
+    border-top: 25px solid #057AC9;
+    border-left: 25px solid #057AC9;
+    border-bottom: 25px solid #057AC9;
+    border-radius: 25px;
+    -webkit-animation: rotate_pacman_half_down 0.5s 0s infinite;
+    animation: rotate_pacman_half_down 0.5s 0s infinite;
+    margin-top: -50px;
+}
+
+.pacman > div:nth-child(3), .pacman > div:nth-child(4), .pacman > div:nth-child(5), .pacman > div:nth-child(6) {
+    background-color: #057AC9;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    margin: 2px;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    -webkit-transform: translate(0, -6.25px);
+    -ms-transform: translate(0, -6.25px);
+    transform: translate(0, -6.25px);
+    top: 25px;
+    left: 100px;
+}

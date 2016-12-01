@@ -1,0 +1,38 @@
+<div class="tab-pane" id="build" element-height style="padding: 0 20px; padding-bottom: 15px;">
+  <div class="row">
+    <form name="upbuildForm">
+
+    <div class="col-md-3" style="text-align: center; position: relative;">
+      <input name="imageName" type="text" ng-model="imageName" style="width: 100%; height: 34px;" placeholder="名称:标签(缺省latest)" ng-disabled="isUpBuilding" autocomplete="off" required>
+    </div>
+
+    <div class='col-md-2' style="text-align: center; position: relative;">
+      <input id="upload-image-btn" name="file" type="file" ng-model="file" style="width: 150px; height: 34px; box-sizing: border-box; position: absolute; z-index: -1;" required>
+      <button ng-disabled="!imageName || isUpBuilding" class="btn btn-primary" style="width: 150px; height: 34px;" ng-click="vm.upbuild()">开始构建 <span class="glyphicon glyphicon-wrench"></span></button>
+    </div>
+
+    </form>
+
+    <div class="col-md-7" style="text-align: center;">
+      <h5 class="fileContextStatus"><strong style="color: #057ac9;">{{fileContextStatus}}</strong></h5>
+    </div>
+
+  </div>
+  <div class="pane" style="margin-top: 10px; border: 1px solid #f3f3f3;">
+    <div class="sub-pane build-logs" style="overflow-x: hidden; overflow-y: auto;">
+
+        <p id="stdout"></p>
+
+        <div ng-if="isUpBuilding" class="animate-if loader" style="width: 50px; height: auto; transform: scale(0.5)">
+          <div class="loader-inner pacman">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+
+    </div>
+  </div>
+</div>

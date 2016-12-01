@@ -1,0 +1,33 @@
+<div class="tab-pane" id="build" element-height style="padding: 0 20px">
+
+  <form name="importForm">
+    <div class="row">
+
+      <div style="text-align: center; position: relative; line-height: 34px;">
+        <input name='image' type="text" ng-model="imageSrc" placeholder="镜像地址" style="width: 300px; height: 34px;" autocomplete="off" required ng-readonly="imoprtFlag">
+        <button class="btn btn-primary" type="button" style="width: 150px; height: 34px;" ng-click="vm.imoprt()" ng-disabled="!imageSrc || imoprtFlag">镜像导入 <span class="glyphicon glyphicon-open"></span></button>
+      </div>
+
+    </div>
+  </form>
+
+
+  <div class="pane" style="margin-top: 10px; border: 1px solid #f3f3f3;">
+    <div class="sub-pane build-logs" style="overflow-x: hidden; overflow-y: auto;">
+
+        <p id="stdout"></p>
+
+        <div ng-if="imoprtFlag" class="animate-if loader" style="width: 50px; height: auto; transform: scale(0.5)">
+          <div class="loader-inner pacman">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+
+    </div>
+  </div>
+
+</div>
